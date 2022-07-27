@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.012">
+    <testcase classname="TC_01 User Registiration" name="_2" time="0.132">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Launch browser........................................................undefined
+When Navigate to url 'http://automationexercise.com'........................skipped
+Then Verify that home page is visible successfully..........................skipped
+And Click on 'Signup / Login' button........................................skipped
+Then Verify 'New User Signup!' is visible...................................skipped
+And Enter name and email address............................................skipped
+And Click 'Signup' button...................................................skipped
+Then Verify that 'ENTER ACCOUNT INFORMATION' is visible.....................skipped
+And Fill details: Title, Name, Email, Password, Date of birth...............skipped
+Then Select checkbox 'Sign up for our newsletter!'..........................skipped
+And Select checkbox 'Receive special offers from our partners!'.............skipped
+Then Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.skipped
+And Click 'Create Account button'...........................................skipped
+Then Verify that 'ACCOUNT CREATED!' is visible..............................skipped
+And Click 'Continue' button.................................................skipped
+Then Verify that 'Logged in as username' is visible.........................skipped
+And Click 'Delete Account' button...........................................skipped
+Then Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button..skipped
+]]></failure>
+    </testcase>
+</testsuite>

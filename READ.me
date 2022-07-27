@@ -1,0 +1,23 @@
+Project Creation:
+* Can choose maven in new project's options because it supplies convenience for build
+* Can add dependencies that you need from mvnrepository.com
+* Create new packages: pages, step definitions, and utilities under the java
+ and resources directory for features files under the project
+* Create a configuration.properties file under the project
+ and add browser type(chrome, firefox, safari...) and website URL
+* Create ConfigReader and Driver classes under utilities
+* ConfigReader provides data from configuration.properties and we may use the Properties class from the java util library
+* Driver class is important for us we don't want any changing directly. now we profit by encapsulation(OOP) and
+ change to access modifier private to the constructor, getDriver method includes optional browser with switch case.
+* We can see the data with the help of ConfigReader. We may use the webdrivermanager come from dependencies in pom.xml
+* Runner class is like the muscles that provide executing scripts
+* We use @RunWith(cucumber.class) come from dependencies
+* Cucumber options give a chance to write: plugin (which is getting the reports), features(which is getting scenarios),
+ glue(which is getting steps), tags(which provide the ability for choosing a specific scenario) and
+ dryRun(which is getting to steps definitions if it is true)
+* Create Hooks class for suitability to less code logic. Use @Before and @After annotations that come from JUnit.
+* We want to take screenshots if the scenarios failed. So we can profit from the TakeScreenshot interface in @After.
+
+    Now we write the scenario with Gherkin language then runner class was executed with dryRun= true and
+ we can get the scenario's all steps. We can paste the all scenarios to the related stepDefinition class. We can complete
+ each method with locates and methods that come from pages class(ensured by creating an object)
