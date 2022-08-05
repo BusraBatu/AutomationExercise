@@ -1,22 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.628">
-    <testcase classname="TC_01 User Registration" name="_2" time="0.069">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Navigate to url 'http://automationexercise.com'.......................undefined
-And Verify that home page is visible successfully...........................skipped
-Then Click on 'Signup / Login' button.......................................skipped
-And Verify 'New User Signup!' is visible....................................skipped
-And Enter name and email address............................................skipped
-Then Click 'Signup' button..................................................skipped
-And Verify that 'ENTER ACCOUNT INFORMATION' is visible......................skipped
-Then Fill details: Title, Name, Email, Password, Date of birth..............skipped
-And Select checkbox 'Sign up for our newsletter!'...........................skipped
-Then Select checkbox 'Receive special offers from our partners!'............skipped
-And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.skipped
-Then Click 'Create Account button'..........................................skipped
-And Verify that 'ACCOUNT CREATED!' is visible...............................skipped
-Then Click 'Continue' button................................................skipped
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="77.57">
+    <testcase classname="TC_01" name="TC_01 User Registration" time="57.711">
+        <system-out><![CDATA[Given Navigate to url 'URL' in browser......................................passed
+And Verify that home page is visible successfully...........................passed
+Then Click on 'Signup / Login' button.......................................passed
+And Verify that 'New User Signup!' is visible...............................passed
+And Enter name and email address............................................passed
+Then Click 'Signup' button..................................................passed
+And Verify that 'Enter Account Information' is visible......................passed
+Then Fill details: Title, Name, Email, Password, Date of birth..............passed
+And Select checkbox 'Sign up for our newsletter!'...........................passed
+Then Select checkbox 'Receive special offers from our partners!'............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+Then Click 'Create Account' button..........................................passed
+And Verify that 'Account Created!' is visible...............................passed
+Then Click 'Continue' button................................................passed
+And Verify that 'Logged in as' is visible...................................passed
+Then Click ' Delete Account' button.........................................passed
+And Verify that "ACCOUNT DELETED!" is visible and click "Continue" button...passed
+]]></system-out>
+    </testcase>
+    <testcase classname="TC_02" name="TC_02 Login User with correct email and password" time="19.325">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),'Signup / Login')]&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-K77MGMS', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0288c2da9735cadb1fc4d03e404c1df0, findElement {using=xpath, value=//*[contains(text(),'Signup / Login')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\ZGR~1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57219/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0288c2da9735cadb1fc4d03e404c1df0" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Navigate to url 'URL' in browser......................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on 'Signup / Login' button........................................failed
+Then Verify that 'Login to your account' is visible.........................skipped
+And Enter correct email address and password................................skipped
+Then Click 'login' button...................................................skipped
 And Verify that 'Logged in as username' is visible..........................skipped
 Then Click 'Delete Account' button..........................................skipped
+And Verify that 'ACCOUNT DELETED!' is visible...............................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Signup / Login')]"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-K77MGMS', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0288c2da9735cadb1fc4d03e404c1df0, findElement {using=xpath, value=//*[contains(text(),'Signup / Login')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\ZGR~1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57219/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0288c2da9735cadb1fc4d03e404c1df0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at pages.FirstPage.clickOnButton(FirstPage.java:34)
+	at stepdefinitions.TC_01_StepDefinitions.click_on_button(TC_01_StepDefinitions.java:39)
+	at ✽.Click on 'Signup / Login' button(file:///C:/Users/özgür/IdeaProjects/AutomationExercise/src/test/resources/_UI_Features/TC_02.feature:7)
 ]]></failure>
     </testcase>
 </testsuite>

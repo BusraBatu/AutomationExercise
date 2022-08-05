@@ -20,7 +20,7 @@ public class FirstPage {
     public WebElement nameTextBox;
 
     @FindBy(xpath = "//input[@data-qa='signup-email']")
-    public WebElement emailTextBox;
+    public WebElement signUpEmailTextBox;
 
 
     @FindBy(id = "id_gender2")

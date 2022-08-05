@@ -17,8 +17,9 @@ import utilities.ReusableMethods;
 
 public class TC_01_StepDefinitions {
     FirstPage one = new FirstPage();
-    String userName;
-    String email;
+    String userName="";
+    String email="";
+    String password="";
     Actions action = new Actions(Driver.getDriver());
 
 
@@ -49,7 +50,7 @@ public class TC_01_StepDefinitions {
         userName = Faker.instance().name().username();
         email = Faker.instance().internet().emailAddress();
         one.nameTextBox.sendKeys(userName);
-        one.emailTextBox.sendKeys(email);
+        one.signUpEmailTextBox.sendKeys(email);
     }
 
     @Then("Click {string} button")
@@ -62,12 +63,12 @@ public class TC_01_StepDefinitions {
     @Then("Fill details: Title, Name, Email, Password, Date of birth")
     public void fill_details_title_name_email_password_date_of_birth() {
         one.femaleGenderButton.click();
-
+        password=Faker.instance().internet().password();
         action.
                 click(one.femaleGenderButton).
                 sendKeys(Keys.TAB).
                 sendKeys(Keys.TAB).
-                sendKeys(Faker.instance().internet().password()).
+                sendKeys(password).
                 sendKeys(Keys.TAB).
                 sendKeys("13").
                 sendKeys(Keys.TAB).

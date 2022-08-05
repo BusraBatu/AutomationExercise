@@ -1,6 +1,6 @@
 Feature: TC_01
 
-  @registration
+  @simple @registration
   Scenario:TC_01 User Registration
 
     Given Navigate to url 'URL' in browser

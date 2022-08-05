@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/",
         glue = "stepdefinitions",
-        tags = "@registration",
-        dryRun = true
+        tags = "@simple",
+        dryRun = false
+
 )
 public class Runner {
 }
